@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1614417984 source:/home/kensus/Documents/learnCpp1/chapter_8/question_1.cpp/main.cpp
+	<iostream>
+	<limits>
+

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1613820318 source:/home/kensus/Documents/learnCpp1/chaper7_controlFlow/assert_and_static.cpp/main.cpp
+	<iostream>
+	<cmath>
+	<string>
+	<cassert>
+

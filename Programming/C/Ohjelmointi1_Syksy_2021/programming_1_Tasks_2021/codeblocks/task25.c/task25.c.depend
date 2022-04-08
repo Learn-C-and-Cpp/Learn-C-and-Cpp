@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1636310804 source:/home/kensus/Development/c-c++/programming-C/Ohjelmointi1_Syksy_2021/programmingTasks/codeblocks/task25.c/main.c
+	<stdio.h>
+	<math.h>
+

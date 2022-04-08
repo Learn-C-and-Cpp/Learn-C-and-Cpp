@@ -1,0 +1,29 @@
+                                                    *************************
+                                                    * Inline and post entry *
+                                                    *************************
+
+  ****************************
+  
+#precondition, postcondition, invariant
+ 
+	Precondition - any condistion that must always be true prior to execution of some component of code (Tets the passed parameters first )
+	Postcondition -  condistion must always be true after the execution of some component of code 
+	Invariant - condistion that must be true while component is executing. example static_assert()
+  
+# Separate input errors into four:
+	# Input extraction succeeds but the input is meaningless to the program (e.g. entering ‘k’ as your mathematical operator).
+	# Input extraction succeeds but the user enters additional input (e.g. entering ‘*q hello’ as your mathematical operator).
+	# Input extraction fails (e.g. trying to enter ‘q’ into a numeric input).
+	# Input extraction succeeds but the user overflows a numeric value.
+
+							**************
+							* Conclusion *
+							**************
+# As you write your programs, consider how users will misuse your program, especially around text input. For each point of text input, consider:
+
+	# Could extraction fail?
+	# Could the user enter more input than expected?
+	# Could the user enter meaningless input?
+	# Could the user overflow an input?
+
+

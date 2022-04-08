@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1602325177 source:/home/kensus/Documents/learnCpp1/stdString/main.cpp
+	<iostream>
+	<string>
+	<limits>
+

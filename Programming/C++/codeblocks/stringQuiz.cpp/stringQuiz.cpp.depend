@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1602352027 source:/home/kensus/Documents/learnCpp1/stringQuiz.cpp/main.cpp
+	<iostream>
+	<string>
+
