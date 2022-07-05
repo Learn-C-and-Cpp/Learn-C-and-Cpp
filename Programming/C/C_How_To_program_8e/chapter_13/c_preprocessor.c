@@ -10,6 +10,11 @@
 // macro definition with one argument. calculate the are or a circle
 #define CIRCLE_AREA(x) ((PI) * (x) * (x)) // one argument macro
 #define RECTANGLE_AREA(x, y) ((x) * (y))  // two arguments macro
+// # and ## Operators
+#define HELLO(x) puts("Hello, " #x);
+#define TOKENCONCAT(x, y) x ## y // concantnate two tokens
+//#define SPHERE(x) (4/3((PI) * (x) * (x) * (x))) // 1436.8
+
 
 //#define IS_BIGGER(x, y)((x > y) y : x)
 
@@ -30,9 +35,7 @@
 //#error 1 - Out of range error
 #pragma token // coauses an implementation-defined action. 
 
-// # and ## Operators
-#define HELLO(x) puts("Hello, " #x);
-#define TOKENCONCAT(x, y) x ## y // concantnate two tokens
+
 
 // Line numbers
 #line 3000
@@ -74,6 +77,7 @@ int main(void)
 #if 1 // out comment if 0 else compile if 1
     double area = CIRCLE_AREA(4);
     int rectArea = RECTANGLE_AREA(0 + 2, 0 + 2);
+    //double sphere = SPHERE(7);
 
     printf("%lf\n", area);
     printf("%d\n", rectArea);
