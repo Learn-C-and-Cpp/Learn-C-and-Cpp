@@ -13,6 +13,7 @@ int newPtr;
 newPtr = malloc(sizeof(struct node));
 
 -Note:when using malloc test for a NULL pointer returned value
+if(newPtr != NULL){ // error handling here}
 -Free no logner needed dyanamically allocated memory
  to avoid premature running out of memory(memory leak) then set pointer
  the NULL to eliminate any posible reference to it.

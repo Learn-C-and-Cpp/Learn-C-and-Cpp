@@ -11,6 +11,8 @@ struct node // type = struct node
    
 };
 
+
+
 //typedef struct node Node;
 
 int main(void)
