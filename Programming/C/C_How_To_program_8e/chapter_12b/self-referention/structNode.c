@@ -19,19 +19,20 @@ struct node // type = struct node
 
 typedef struct node Node; // create alias
 
+// function prototypes
 void printList(Node *head); // pass in head pointer - where to start
 void count_of_nodes(Node *head);
-int numberOfArrayElements(int arr[]);
+void addNodeAtEnd(Node *head, int data);
 
 int main(void)
 {
    // find number of array elements
    int arr[] = {45, 98, 3};
    
-   int count = sizeof(arr) / sizeof(int);
-   printf("elements = %d\n", count);
+   int n = sizeof(arr) / sizeof(int);
+   printf("elements = %d\n", n);
 
-   for (int i = 0; i < count; i++)
+   for (int i = 0; i < n; i++)  // time complexity = O(n)
    {
       printf("%d ", arr[i]);
    }
@@ -45,8 +46,8 @@ int main(void)
    // pointer to the current node
    Node *current;
 
-   // allocate memory for 1st Node - address |0X.....|
-   head = (Node *)malloc(sizeof(Node));
+   // 1st Node: allocate memory address |0X.....|
+   head = (Node *)malloc(sizeof(Node)); 
 
    // set node data and link |45|NULL|
    head->data = 45;
@@ -67,6 +68,13 @@ int main(void)
 
    // update the current link
    head->link->link = current;
+
+
+   // Adding node
+   printf("%s","Enter node\n");
+   int data;
+   scanf("%d", &data);
+   addNodeAtEnd(head, data);
 
    // call printList
    printList(head);
@@ -112,4 +120,26 @@ void count_of_nodes(Node *head)
       ptr = ptr->link;
    }
    printf("count is %d\n", count); // print count
+}
+void addNodeAtEnd(Node *head, int data)
+{
+   // declare pointers
+   Node *ptr, *temp;
+
+   // asign head to ptr
+   ptr = head;
+
+   // create the node
+   temp = malloc(sizeof(Node));
+
+   // add data to it
+   temp->data = data;
+   temp->link = NULL;
+
+   // travers link and put node at the end of the list
+   while (ptr->link != NULL)
+   {
+      ptr = ptr->link;
+   }
+   ptr->link = temp;
 }
