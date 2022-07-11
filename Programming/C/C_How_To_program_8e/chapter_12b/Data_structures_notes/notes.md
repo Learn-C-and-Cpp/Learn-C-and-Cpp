@@ -1,4 +1,5 @@
-/* Data structures(DS)
+
+Data structures(DS)
 Introduction to dynamic data structures  that can grow and shrink at execution time
 1. Linked lists(linear DS):  Insertion and deletion made anywhere in a linked list. Used when
    data to be represented is unpredictable.
@@ -21,6 +22,21 @@ if(newPtr != NULL){ // error handling here}
  free(newPtr);
  newPtr = NULL;
 
+ Structures:
+ - A group of relate variables(Members/property)
+ - Like a class with only public properties and no methodd or consructor(C++/Java-style classes
+   evolved out of C-style structs)
+
+ - Variable declaration: struct <structName><variableName>
+ - Initialization: struct point aPoint{0} all to zero else struct point aPoint{4.0, 8.0}-inorder
+ 
+ - Aliasing with typedef: typedef <existing type><new-name>
+   typedef struct Point Point / typedef struct Point point_t 
+ - 
 
 
-*/
+
+
+
+
+
