@@ -121,10 +121,13 @@ void count_of_nodes(Node *head)
    }
    printf("count is %d\n", count); // print count
 }
+
+// add a node at the end of an existing list
 void addNodeAtEnd(Node *head, int data)
 {
    // declare pointers
-   Node *ptr, *temp;
+   Node *ptr; // traverse the list
+   Node *temp; // hold current node
 
    // asign head to ptr
    ptr = head;
