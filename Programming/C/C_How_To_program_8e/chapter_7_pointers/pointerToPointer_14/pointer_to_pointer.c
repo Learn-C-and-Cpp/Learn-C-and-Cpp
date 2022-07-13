@@ -13,7 +13,7 @@ int main(void)
     int *p = &x;
     *p = 6;
     int **q = &p;
-    int *** r = &q;
+    int ***r = &q;
 
      printf("x = %d\n", *p);
      printf("*p = %d\n", *q);
