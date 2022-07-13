@@ -24,11 +24,11 @@ int main(void)
     // Dangling, Complex, Near, Far, Huge pointer
 
     // take the address of a var
-    ptr = &var;
+  //  ptr = &var;
 
     // takde the value using pptr
-    printf("value of var = %x\n", &var);
     printf("value of var = %d\n", var);
+    printf("value of var = %x\n", &var);    
     printf("value at ptr = %d\n", *ptr);
     printf("value at pptr = %d\n", **pptr);
     printf("value at p = %x\n", p);
@@ -64,6 +64,23 @@ int main(void)
         printf("%c\n", *cPtr);
         cPtr++;
     }
+    puts("----");
+
+  int x = 5;
+  int *n = &x;
+  *n = 6;
+  int** q = &n;
+  int*** r = &q;
+
+  printf("%d\n", x);
+  printf("%d\n", *n);
+  printf("%p\n", *q);
+  printf("%d\n", *(*q));
+  printf("%d\n", (*(*r)));
+   printf("%d\n", *(*(*r)));
+
+
+
 
     return 0;
 }
