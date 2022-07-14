@@ -6,7 +6,7 @@ void increment(int *p);
 int main(void)
 {
     int a = 10;
-    increment(&a);
+    increment(&a); // call by refence
    // printf("Address of variable a in main = %d\n", &a);
     printf("a = %d\n", a);
 
@@ -16,6 +16,6 @@ int main(void)
 // increment a value
 void increment(int *p)
 {
-    *p = (*p) + 1;
+    *p = (*p) + 1; // dereference p
    // printf("Address of variable a in increment = %d\n", &a);
 }
