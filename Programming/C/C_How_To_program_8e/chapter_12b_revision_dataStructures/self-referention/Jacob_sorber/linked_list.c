@@ -72,7 +72,7 @@ void printList(Node_t *head)
 Node_t *create_new_node(int value)
 {
     // allocate a new node using malloc
-    Node_t *newNode = malloc(sizeof(Node_t));
+    Node_t *newNode = (Node_t*)malloc(sizeof(Node_t));
     newNode->value = value;
     newNode->nextPtr = NULL;
     return newNode;

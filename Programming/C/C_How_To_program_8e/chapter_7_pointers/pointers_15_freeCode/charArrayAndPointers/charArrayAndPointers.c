@@ -3,11 +3,11 @@
 
 void printStr(const char* C)
 {
-    //C[0] = 'A';
+    //C[0] = 'A'; // cannot be changed
     while (*C != '\0')
     {
         printf("%c ", *C);
-        C++;
+        C++; // pointer increment
     }
     printf("\n");
 }
