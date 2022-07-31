@@ -1,4 +1,9 @@
+/* Recursion is a process whe a functing calls itself directly or indirectly
+    ->it is about how you are calling a function and where you will return back 
+*/
+
 #include <stdio.h>
+
 int factorial(int n)
 {
     printf("calculation f(%d)\n", n);
