@@ -25,7 +25,7 @@ void new_int_parm(int **ptr, int val)
     int *newptr; // new pointer
     newptr = malloc(sizeof(int)); // allocate some memory
     *newptr = val; 
-    *ptr = newptr; /*Dereferencing ptr gives an alias of the pointer that was passed */
+    *ptr = newptr; /*Dereferencing **ptr gives an alias of the pointer that was passed */
     
 }
 
@@ -40,7 +40,7 @@ int main()
     printf(" &dptr [%p]: dptr = %p *dptr = %p **dptr= %d\n", &dptr, dptr, *dptr, **dptr);
 
     puts(" ");
-    int sum = add(2, 5);
+    int sum = add(2, 5); // pass by value, returning an int
     printf("sum = %d\n", sum);
 
     // returning a pointer
