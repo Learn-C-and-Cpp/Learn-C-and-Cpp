@@ -7,7 +7,6 @@ void returnPointer(int **ptr)
 {
     int x = 10;
     int *newPtr = &x;
-
     //newPtr = malloc(sizeof(int));
     *newPtr = x;
     (*ptr) = newPtr;
