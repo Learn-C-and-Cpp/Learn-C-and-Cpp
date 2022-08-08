@@ -1,3 +1,9 @@
+/* insert a node at any given position in the linked list, there could be two scenarios
+    1. Empty list (Head is NULL)
+    2. Invalid position (out of range)
+
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 
