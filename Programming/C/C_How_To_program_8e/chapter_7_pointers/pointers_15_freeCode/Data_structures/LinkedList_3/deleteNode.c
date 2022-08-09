@@ -6,11 +6,11 @@
 struct node
 {
     int data;
-    struct node *next;
+    struct node *next; // pointer to node
 };
 typedef struct node Node_t; // node alia
 
-Node_t *head;
+Node_t *head; // pointer to head
 
 // protypes
 void insert(int data); // insert data at the end of the list
@@ -21,11 +21,12 @@ int main()
 {
     head = NULL; // empty list
 
+    // instert four integers
     insert(2);
     insert(4);
     insert(6);
     insert(5);
-    printList(); 
+    printList(); // print
 
     int position;
     printf("Enter a position\n");
@@ -42,8 +43,37 @@ void insert(int data)
     temp->next = NULL;
     if(head != NULL)
     {
-        
+        head = temp->next;
+        head = temp;
+    }
+    
+}
+void printList()
+{
+    while (head != NULL)
+    {
+        printf(" %d", head->data);
+        head = head->next;
     }
 }
-void printList(){}
-void deleteNode(int position){} 
+void deleteNode(int position)
+{
+    Node_t *temp1 = head;
+    // when deleting the head node
+    if (position == 1) 
+    {
+        head = temp1->next; // head now points the secod node
+        free(temp1);
+        return;
+    }
+
+    for (size_t i = 0; i < position-2; i++)
+    {
+        temp1 = temp1->next;
+        // temp1 points to (n-1) Node
+        Node_t *temp2 = temp1->next; // nth node
+        temp1->next = temp2->next; // (n+1)th node
+        free(temp2);
+
+    }
+}
