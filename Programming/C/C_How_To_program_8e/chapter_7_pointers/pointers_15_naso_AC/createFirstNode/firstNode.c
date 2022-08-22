@@ -8,11 +8,12 @@ struct node
     int data;
     struct node *link;
 };
-typedef struct node Node_t;
+typedef struct node Node_t; 
 
 // prototypes
 void travers_counting_nodes(Node_t *head);
 void print_data(Node_t* head);
+void add_at_end(Node_t* head, int data);
 
 int main()
 {
@@ -29,18 +30,41 @@ int main()
     current->link = NULL;
     head->link = current;
 
-    // 2nd node
+    // 3rd node
     current = (Node_t *)malloc(sizeof(Node_t)); // allocate memory
-    current->data = 3;
+    current->data = 3; 
     current->link = NULL;
-    head->link->link = current;
+    head->link->link = current; // head(100),head->link(200), head->link->link(300) 
     // printf("%d", head->link->link->data);
-    //  counting of nodes
+    // counting of nodes
+    
+    //add_at_end(head, 67);
     travers_counting_nodes(head);
+
     print_data(head);
 
     return 0;
 }
+// add node at end
+void add_at_end(Node_t* head, int data)
+{
+    Node_t* ptr; // used to travers
+    Node_t* temp; // allocate memory space
+
+    ptr = head; // ptr is pointing to the head of the list
+    temp = (Node_t*)malloc(sizeof(Node_t)); // create a new node, |data|link|
+    temp->data = data;
+    temp->link = NULL;
+
+    // travers to the end of the list
+    while (ptr->link != NULL)
+    {
+        ptr->link = temp;
+    }
+    ptr->link = temp; // update ptr link; 
+
+}
+
 // counting list nodes
 void travers_counting_nodes(Node_t *head)
 {

@@ -50,7 +50,7 @@ int main(void)
 }
 
 // in modifyArrayByReference, "b" points to the original array "a" in memory
-void modifyArrayByReference(int b[], size_t size)
+void modifyArrayByReference(int *b, size_t size)
 {
     // multyply each array element by 2
     for (size_t i = 0; i < SIZE; i++)

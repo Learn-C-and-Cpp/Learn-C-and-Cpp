@@ -37,7 +37,7 @@ int cubeByValue(int n)
 // function take as aparmeter pointer to integer nPtr 
 void cubeByReference(int *nPtr)
 {
-    *nPtr  = *nPtr * *nPtr * *nPtr; // dereference the pointer and cube *nPtr
+    *nPtr  = (*nPtr) * (*nPtr) * (*nPtr); // dereference the pointer and cube *nPtr
     
    
 }
