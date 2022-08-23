@@ -10,70 +10,69 @@ struct node
 };
 typedef struct node Node_t; // node alia
 
-Node_t *head; // pointer to head
-
 // protypes
-void insert(int data); // insert data at the end of the list
-void printList(); // print elements of the list
-void deleteNode(int position); // delete a node at given position
+Node_t *insert(Node_t *head, int data);      // insert data at the end of the list
+void printList(Node_t *head);                // print elements of the list
+void deleteNode(Node_t *head, int position); // delete a node at given position
 
 int main()
 {
-    head = NULL; // empty list
+    Node_t *head = NULL; // empty list
 
     // instert four integers
-    insert(2);
-    insert(4);
-    insert(6);
-    insert(5);
-    printList(); // print
+    head = insert(head, 2);
+    head = insert(head, 4);
+    head = insert(head, 6);
+    head = insert(head, 5);
+    printList(head); // print
 
     int position;
     printf("Enter a position\n");
     scanf("%d", &position);
-    deleteNode(position);
-    printList();
+    deleteNode(head, position);
+    printList(head);
 
     return 0;
 }
-void insert(int data)
+Node_t *insert(Node_t *head, int data)
 {
     Node_t *temp = (Node_t *)malloc(sizeof(Node_t));
     temp->data = data;
     temp->next = NULL;
-    if(head != NULL)
+
+    if (head != NULL)
     {
         head = temp->next;
-        head = temp;
     }
-    
+    head = temp;
+    return head;
 }
-void printList()
+void printList(Node_t *head)
 {
-    while (head != NULL)
+    Node_t *temp = head;
+    while (temp != NULL)
     {
-        printf(" %d", head->data);
-        head = head->next;
+        printf(" %d", temp->data);
+        temp = temp->next;
     }
 }
-void deleteNode(int position)
+void deleteNode(Node_t *head, int position)
 {
     Node_t *temp1 = head;
     // when deleting the head node
-    if (position == 1) 
+    if (position == 1)
     {
         head = temp1->next; // head now points the secod node
         free(temp1);
         return;
     }
 
-    for (size_t i = 0; i < position-2; i++)
+    for (size_t i = 0; i < position - 2; i++)
     {
         temp1 = temp1->next;
         // temp1 points to (n-1) Node
         Node_t *temp2 = temp1->next; // nth node
-        temp1->next = temp2->next; // (n+1)th node
+        temp1->next = temp2->next;   // (n+1)th node
         free(temp2);
-
     }
 }
