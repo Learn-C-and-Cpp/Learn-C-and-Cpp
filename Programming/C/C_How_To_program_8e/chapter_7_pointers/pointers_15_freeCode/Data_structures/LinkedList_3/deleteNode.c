@@ -1,4 +1,6 @@
-// Delete a node at nth position
+// make correction
+
+// Delete a node at nth position  
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -17,7 +19,7 @@ void deleteNode(Node_t *head, int position); // delete a node at given position
 
 int main()
 {
-    Node_t *head = NULL; // empty list
+    Node_t *head = NULL; // empty list 
 
     // instert four integers
     head = insert(head, 2);
