@@ -19,7 +19,7 @@ int *new_integer_pointer(int value)
 
     return newPtr; //  return that new pointer
 }
-// a fanction that changes the pointers value / update a pointer
+// a fanction that changes the pointers value / update a pointer to hold a new value
 void new_int_parm(int **ptr, int val)
 {
     int *newptr; // new pointer
@@ -29,13 +29,21 @@ void new_int_parm(int **ptr, int val)
     
 }
 
+void doublePtr(int **ptr, int data)
+{
+    int *newPtr;
+    newPtr = (int*)malloc(sizeof(int));
+    *newPtr = data;
+    *ptr = newPtr;
+}
+
 int main()
 {
     int val = 7;
     int *ptr = &val;
     int **dptr = &ptr;
 
-    printf(" val [%p]: val = %d\n", &val, val);
+    printf(" &val [%p]: val = %d\n", &val, val);
     printf(" ptr [%p]: ptr = %p *ptr = %d\n", &ptr, ptr, *ptr);
     printf(" &dptr [%p]: dptr = %p *dptr = %p **dptr= %d\n", &dptr, dptr, *dptr, **dptr);
 
@@ -53,9 +61,9 @@ int main()
     printf("    ptr2=%p &ptr2=%p\n", (void *)ptr2, (void *)&ptr2);
     printf("\n");
 
-    printf("new int return\n");
-    ptr1 = new_integer_pointer(4);
-    ptr2 = new_integer_pointer(7);
+    printf("return new int return\n");
+    ptr1 = new_integer_pointer(val);
+    ptr2 = new_integer_pointer(4);
     printf("    ptr1=%p *ptr1=%d &ptr1=%p\n", ptr1, *ptr1, &ptr1);
     printf("    ptr2=%p *ptr2=%d &ptr2=%p\n", ptr2, *ptr2, &ptr2);
     printf("\n");
@@ -66,6 +74,15 @@ int main()
     printf("    ptr1=%p *ptr1=%d &ptr1=%p\n", ptr1, *ptr1, &ptr1);
     printf("    ptr2=%p *ptr2=%d &ptr2=%p\n", ptr2, *ptr2, &ptr2);
     printf("\n");
+
+    printf("**dptr\n");
+    int *head = NULL;
+    
+    printf("before head=%p &head=%p\n", head, &head);
+    doublePtr(&head, 44);
+    printf("after head=%p &head=%p *head= %d\n", head, &head, *head);
+
+
 
     return 0;
 }
