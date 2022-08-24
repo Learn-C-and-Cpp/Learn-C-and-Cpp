@@ -23,7 +23,7 @@ void printList();
 
 int main()
 {
-    Node_t* head = NULL; // List is empty
+    Node_t*  head = NULL; // List is empty
     // insert data
     insert(&head, 2, 1);
     insert(&head, 3, 2);

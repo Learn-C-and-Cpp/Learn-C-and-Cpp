@@ -5,8 +5,8 @@
 // defing a structure
 struct node
 {
-    int data;
-    struct node *next;
+    int data; // linked list of integers
+    struct node *next; // 
 };
 typedef struct node Node_t;
 

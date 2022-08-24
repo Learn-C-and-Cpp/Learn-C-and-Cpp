@@ -37,6 +37,8 @@ int main()
     
     // call by reference
     add_at_begining_byRef(&head, data);
+    add_at_begining_byRef(&head, data);
+    add_at_begining_byRef(&head, data);
 
     // printing data
     printList(head);
