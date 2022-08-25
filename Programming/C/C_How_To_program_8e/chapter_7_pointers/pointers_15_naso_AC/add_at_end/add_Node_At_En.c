@@ -46,10 +46,10 @@ int main()
 Node_t*  add_at_end(Node_t* ptr, int data)
 {
     // create node
-    Node_t* current = (Node_t*)malloc(sizeof(Node_t));
-    current->data = data;
-    current->link = NULL;
+    Node_t* temp = (Node_t*)malloc(sizeof(Node_t));
+    temp->data = data;
+    temp->link = NULL;
 
-    ptr->link = current; // update ptr link part of the previous node
-    return current;
+    ptr->link = temp; // update ptr link part of the previous node
+    return temp;
 }
