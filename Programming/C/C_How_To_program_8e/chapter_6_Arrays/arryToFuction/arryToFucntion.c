@@ -22,7 +22,7 @@ int main(void)
     }
     puts(""); // outputs a newline
 
-    /*-- pass array a to modifyArray by reference --*/
+    /*-- pass array  to modifyArray by reference --*/
 
     modifyArrayByReference(a, SIZE);
     puts("The values of the modified array are:");

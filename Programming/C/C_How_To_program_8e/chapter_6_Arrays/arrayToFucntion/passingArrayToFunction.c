@@ -27,7 +27,7 @@ int main()
     //passing an array element  hourlyTemperature[2] by value
     modifyArrayElement(hourlyTemperature[2]);
     //print out array element 
-    printf("print out array element a[2] = %d\n", hourlyTemperature[2]);
+    printf("\nprint out array element a[2] = %d\n", hourlyTemperature[2]);
 
     // tryModifyArray
     tryModifyArray(hourlyTemperature[2]);

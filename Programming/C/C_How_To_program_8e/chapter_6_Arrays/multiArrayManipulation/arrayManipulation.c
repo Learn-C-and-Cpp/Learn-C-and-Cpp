@@ -75,7 +75,7 @@ int maximum(const int grade[][EXAMS] ,size_t pupils, size_t test)
     // inintialize high grade 
     int highGrade = 0;
 
-    //loot through rows of grades
+    //loop through rows of grades
     for (size_t i = 0; i < pupils; ++i)
     {
         for (size_t j = 0; j < test; ++j)
