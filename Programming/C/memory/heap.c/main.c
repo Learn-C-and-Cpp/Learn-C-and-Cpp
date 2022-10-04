@@ -25,13 +25,13 @@ int main()
 
     // c++
 
-    int *b;
-    b = new int;
-    *b = 10;
-    delete b;
+    // int *b;
+    // b = new int;
+    // *b = 10;
+    // delete b;
 
-    b= new int[20];
-    delete[]b;
+    // b= new int[20];
+    // delete[]b;
 
 
     printf("Hello world!\n");
