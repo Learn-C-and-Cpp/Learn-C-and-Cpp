@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1602198698 source:/home/kensus/Documents/learnCpp1/quizTimechper6.cpp/main.cpp
+	<iostream>
+	"canstants.h"
+
+1602198669 /home/kensus/Documents/learnCpp1/quizTimechper6.cpp/canstants.h
+
