@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1606641923 source:/home/kensus/Documents/learnCpp1/pseudoRandomGenerator.cpp/main.cpp
-	<iostream>
-	<cstdlib>
-	<ctime>
-

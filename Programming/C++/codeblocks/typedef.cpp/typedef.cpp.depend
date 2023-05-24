@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1601581696 source:/home/kensus/Documents/learnCpp/typedef.cpp/main.cpp
-	<iostream>
-
-1601751474 source:/home/kensus/Documents/learnCpp_1/learnCpp/typedef.cpp/main.cpp
-	<iostream>
-	<cstdint>
-

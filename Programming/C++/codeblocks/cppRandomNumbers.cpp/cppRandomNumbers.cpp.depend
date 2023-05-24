@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1607296189 source:/home/kensus/Documents/learnCpp1/cppRandomNumbers.cpp/main.cpp
-	<iostream>
-	<cstdlib>
-	<ctime>
-	<random>
-
