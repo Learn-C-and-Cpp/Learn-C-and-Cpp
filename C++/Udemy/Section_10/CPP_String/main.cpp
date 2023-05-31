@@ -11,9 +11,10 @@ int main()
     std::string s3{"Kiwi"};
     std::string s4{"apple"};
     std::string s5{s1};       // Apple
-    std::string s6{s1, 0, 3}; // App
+    std::string s6{s1, 0, 3}; // App 
     std::string s7(10, 'X');  // XXXXXXXXXX
 
+     
     // std::cout << s0 << std::endl;          // No garbage
     // std::cout << s0.length() << std::endl; // empty string
 
@@ -87,22 +88,22 @@ int main()
     // getline(std::cin, full_name);
     // std::cout << "Your full name is: "<< full_name << std::endl;
 
-    // std::cout << "Find -----------------" << std::endl;
-    // s1 = "The secret word is Boo";
-    // std::string word{};
+     std::cout << "Find -----------------" << std::endl;
+     s1 = "The secret word is Boo";
+     std::string word{};
 
-    // std::cout << "Enter the word to find:" << std::endl;
-    // std::cin >> word;
+     std::cout << "Enter the word to find:" << std::endl;
+     std::cin >> word;
 
-    // size_t position = s1.find(word);
-    // if (position != std::string::npos)
-    // {
-    //     std::cout << "Found " << word << " at position " << position << std::endl;
-    // }
-    // else
-    // {
-    //     std::cout << "Sorry, " << word << " not found" << std::endl;
-    // }
+     size_t position = s1.find(word);
+     if (position != std::string::npos)
+     {
+         std::cout << "Found " << word << " at position " << position << std::endl;
+     }
+     else
+     {
+         std::cout << "Sorry, " << word << " not found" << std::endl;
+     }
 
     
     return 0;

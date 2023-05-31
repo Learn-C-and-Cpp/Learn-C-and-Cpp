@@ -48,4 +48,6 @@ int main()
     std::cout << journal_entry_1 << "\n"
               << journal_entry_2 << std::endl;
     ;
+
+   
 }

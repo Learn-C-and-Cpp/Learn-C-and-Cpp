@@ -54,7 +54,7 @@
 
 int main()
 {
-    // Declare a vector on numbers
+    // Declare a vector of numbers
     std::vector<int> data_set{};
     // Menu
     char selection{};
