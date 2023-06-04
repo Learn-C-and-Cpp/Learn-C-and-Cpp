@@ -42,8 +42,8 @@ int main()
     std::vector<std::string> *verctor_ptr{nullptr};
     verctor_ptr = &students;
 
-    std::cout << "First stooges " << (*verctor_ptr).at(0) << std::endl;
-
+    std::cout << "First students " << (*verctor_ptr).at(0) << std::endl;
+    
     // loop through vector
     std::cout << "..................." << std::endl;
     for(auto student: *verctor_ptr)
