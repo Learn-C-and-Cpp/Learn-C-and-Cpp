@@ -30,16 +30,15 @@ int *create_array(size_t size, int init_value)
     new_storage = new int[size];
     for (size_t i{0}; i < size; ++i)
     {
-        *(new_storage + i) = init_value;
+        *(new_storage + i) = init_value; // Pointer offset notation
     }
-
     return new_storage;
 }
 void display(const int *const array, size_t size) // const int *const ptr;
 {
     for (size_t i{0}; i < size; i++)
     {
-        std::cout << array[i] << " "; // 
+        std::cout << array[i] << " "; // array subscrit notation
     }
     std::cout << std::endl;
 }
