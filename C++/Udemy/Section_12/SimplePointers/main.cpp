@@ -21,6 +21,8 @@ int main()
     std::cout << std::endl;
 
     int *p1{nullptr};
+
+
     double *p2{nullptr};
     unsigned long long *p3{nullptr};
     std::vector<std::string> *p4{nullptr};
