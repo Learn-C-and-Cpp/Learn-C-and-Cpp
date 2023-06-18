@@ -33,6 +33,7 @@ void pass_by_value4(std::vector<std::string> v)
 }
 int main()
 {
+    std::cout << "---------- by value ----" <<std::endl;
     int num{10};
     int another_num{20};
 
@@ -54,7 +55,7 @@ int main()
     std::cout << std::endl;
     std::vector<std::string> stooges{"Larry", "Moe", "Curly"};
 
-    std::cout << "stooges befor calling pass_by_value3: ";
+    std::cout << "stooges before calling pass_by_value3: ";
 
     for (const std::string &stooge : stooges)
     {
@@ -78,7 +79,6 @@ int main()
         std::cout << stooge << " ";
     }
     std::cout << std::endl;
-
 
     return 0;
 }
