@@ -29,15 +29,29 @@ public:
     // methods
     bool deposit(double bal)
     {
-        balance += bal;
-        std::cout << "In deposit" << std::endl;
-        return (balance > 0);
+        if (bal > 0)
+        {
+            balance += bal;
+            std::cout << "In deposit" << std::endl;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
-    bool withdraw(double bal)
+    bool withdraw(double amount)
     {
-        balance -= bal;
-        std::cout << "In withdraw" << std::endl;
-        return (balance > 0);
+        if (balance - amount >= 0)
+        {
+            balance -= amount;
+            std::cout << "In withdraw" << std::endl;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 };
 
@@ -48,8 +62,8 @@ int main()
     frank_account.name = "Frank's account";
     frank_account.balance = 5000.0;
 
-    bool dep = frank_account.deposit(1000.0);
-    bool withd = frank_account.withdraw(500.0);
+    frank_account.deposit(1000.0);
+    frank_account.withdraw(500.0);
 
     Account *mary_count = new Account;
     mary_count->name = "Mary";
@@ -58,7 +72,7 @@ int main()
     (*mary_count).deposit(1000.0);
     mary_count->withdraw(7200.0);
     delete mary_count;
-    
+
     // Player objects
     Player Frank;
     Frank.name = "Frank";

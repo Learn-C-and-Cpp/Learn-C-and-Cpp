@@ -14,7 +14,8 @@ private:
 public:
     // methods
     // declared inline
-    void set_balance(double bal) { balance = bal; }
+    // getters and setters
+    void set_balance(double bal) { balance = bal; } // Implemented inside the class
     double get_balance() { return balance; }
 
     // This function prototypes will be implemented outside the class declaration
@@ -67,7 +68,7 @@ int main()
     frank_account.set_name("Frank's account");
     frank_account.set_balance(1000.0);
 
-    if (frank_account.deposite(-200.0))
+    if (frank_account.deposite(200.0))
     {
        std::cout << "Deposite OK" <<std::endl;
     }

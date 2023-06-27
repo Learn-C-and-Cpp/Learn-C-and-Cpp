@@ -11,7 +11,10 @@ private:
 
 public:
     // methods
-    void talk(std::string text_to_say) { std::cout << name << " says " << text_to_say << std::endl; } // implementation is implicitly inline
+    void talk(std::string text_to_say)
+    {
+        std::cout << name << " says " << text_to_say << std::endl;
+    } // implementation is implicitly inline
     bool is_dead();
 };
 
