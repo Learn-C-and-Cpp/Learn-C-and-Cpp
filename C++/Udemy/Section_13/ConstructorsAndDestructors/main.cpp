@@ -32,7 +32,7 @@ int main()
 
     // Player objects
     {
-        Player slayer;
+        Player slayer;  
         slayer.set_name("Slayer");
     } // slayer destroyed
 
@@ -45,7 +45,7 @@ int main()
         villain.set_name("Villain");
     }
 
-    Player *enemy{nullptr};
+    Player *enemy{nullptr}; // on the heap must delete.
     enemy = new Player();
     (*enemy).set_name("Enemy");
 
