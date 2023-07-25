@@ -65,13 +65,15 @@ int main()
     frank_account.deposit(1000.0);
     frank_account.withdraw(500.0);
 
-    Account *mary_count = new Account;
-    mary_count->name = "Mary";
-    mary_count->balance = 9000.0;
+    Account *mary_count = new Account; // Dynamically allocated
+    mary_acount->name = "Mary";
+    mary_acount->balance = 9000.0;
 
-    (*mary_count).deposit(1000.0);
-    mary_count->withdraw(7200.0);
-    delete mary_count;
+    (*mary_acount).deposit(1000.0);
+    mary_acount->withdraw(7200.0);
+    
+    //delete account in heap
+    delete mary_acount;
 
     // Player objects
     Player Frank;
