@@ -1,0 +1,6 @@
+log 1: read data
+log 2: write data
+log 3: data error
+log 1: read data
+log 2: write data
+log 3: data error
