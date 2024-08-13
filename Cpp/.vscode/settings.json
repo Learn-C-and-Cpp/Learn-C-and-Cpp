@@ -56,5 +56,5 @@
         "list": "cpp",
         "fstream": "cpp"
     },
-    "C_Cpp.clang_format_fallbackStyle": "Microsoft"
+    "C_Cpp.clang_format_fallbackStyle": "Google"
 }
