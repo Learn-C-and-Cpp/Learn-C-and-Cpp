@@ -1,0 +1,38 @@
+// Implementing member methods 2
+#include <iostream>
+
+class Player
+{
+private:
+    // attributes
+    std::string name;
+    int health;
+    int xp;
+
+public:
+    // methods
+    void set_name(std::string name_val) { name = name_val; }
+    std::string get_name() { return name; }    
+
+    Player(){
+        name = "None";
+        health = 100;
+        xp = 3;
+    }
+    Player(std::string name_val, int health_val, int xp_val){
+        name = name_val;
+        health = health_val;
+        xp = xp_val;
+    }
+};
+
+int main()
+{
+    Player hero;
+    Player frank {"Frank", 100, 13};
+    frank.set_name("frank");
+    std::cout << frank.get_name() << std::endl;
+    
+
+    return 0;
+}
