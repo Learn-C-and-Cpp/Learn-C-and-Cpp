@@ -1,4 +1,4 @@
-// Implementing member methods 2
+// Constructot parameters and defaul values
 #include <iostream>
 
 class Player
