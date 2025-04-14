@@ -23,9 +23,13 @@ Shallow::Shallow(int d)
     *data = d;      // store d in the space
 }
 Shallow::Shallow(const Shallow &source)
-    : data(source.data)
+   : data(source.data) 
 {
+    //this->data=source.data;
+
     std::cout << "Copy constructor - shallow copy" << std::endl;
+    std::cout << "Source.data "<< source.data << std::endl;
+    std::cout << "This->data "<< *(this->data) << std::endl;
 }
 Shallow::~Shallow(){
     delete data;
