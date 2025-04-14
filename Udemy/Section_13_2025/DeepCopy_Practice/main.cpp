@@ -26,12 +26,12 @@ DeepCopy::DeepCopy(int d)
 }
 
 DeepCopy::DeepCopy(const DeepCopy &source)
-    /*: data(source.data)*/
+    : DeepCopy{*source.data}
 {
     data = new int; // storage for the compy of what we are pointing to  then compy the data
     *data = *source.data;
 
-    std::cout << "Copy constructor -shallow copy " << std::endl;
+    std::cout << "Copy constructor -deep copy " << std::endl;
 }
 
 DeepCopy::~DeepCopy()
