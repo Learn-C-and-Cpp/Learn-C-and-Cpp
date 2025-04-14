@@ -17,7 +17,6 @@ public:
     DeepCopy(const DeepCopy &copy);
     // Destructor
     ~DeepCopy();
-    
 };
 // implementation
 DeepCopy::DeepCopy(int d)
@@ -27,28 +26,32 @@ DeepCopy::DeepCopy(int d)
 }
 
 DeepCopy::DeepCopy(const DeepCopy &source)
-    : data(source.data)
+    /*: data(source.data)*/
 {
+    data = new int; // storage for the compy of what we are pointing to  then compy the data
+    *data = *source.data;
+
     std::cout << "Copy constructor -shallow copy " << std::endl;
 }
 
 DeepCopy::~DeepCopy()
-    {
-        delete data;
-        std::cout << "Destructor called" << std::endl;
-    }
+{
+    // free storage
+    delete data;
+    std::cout << "Destructor called" << std::endl;
+}
 
 void display_DeepCopy(DeepCopy copy)
 {
-    std::cout <<copy.get_data() << std::endl;
+    std::cout << copy.get_data() << std::endl;
 }
 
 int main()
 {
     DeepCopy d1{100};
     display_DeepCopy(d1);
-    DeepCopy d2{d1}; // copy d1 into d2 
-    d2.set_data(1000);    
+    DeepCopy d2{d1}; // copy d1 into d2
+    d2.set_data(1000);
 
     return 0;
 }
