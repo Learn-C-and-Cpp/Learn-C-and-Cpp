@@ -9,8 +9,14 @@ private:
 
 public:
     // methods
-    void set_data_value(int d) { *data = d; }
-    int get_data_value() { return *data; }
+    void set_data_value(int d)
+    {
+        *data = d;
+    }
+    int get_data_value()
+    {
+        return *data;
+    }
     // Constructor
     Shallow(int d);
     Shallow(const Shallow &source);
@@ -23,19 +29,22 @@ Shallow::Shallow(int d)
     *data = d;      // store d in the space
 }
 Shallow::Shallow(const Shallow &source)
-   : data(source.data) 
+    : data(source.data)
 {
-    //this->data=source.data;
+    // this->data=source.data;
 
     std::cout << "Copy constructor - shallow copy" << std::endl;
-    std::cout << "Source.data "<< source.data << std::endl;
-    std::cout << "This->data "<< *(this->data) << std::endl;
+    std::cout << "Source.data " << source.data << std::endl;
+    std::cout << "*source.data " << *source.data << std::endl;
+    std::cout << "This->data " << *(this->data) << std::endl;
 }
-Shallow::~Shallow(){
+Shallow::~Shallow()
+{
     delete data;
     std::cout << "Destructor freeing data" << std::endl;
 }
-void display_shallow(Shallow s){
+void display_shallow(Shallow s) // copy object using a copy constructor
+{
     std::cout << s.get_data_value() << std::endl;
 }
 int main()

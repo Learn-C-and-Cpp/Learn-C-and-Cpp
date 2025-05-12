@@ -1,57 +1,53 @@
-// Practice deep copy
+// deep compy 57
 #include <iostream>
 
+// Class DeepCopy
 class DeepCopy
 {
-    // attributes
+    // Attributes
 private:
     int *data;
-    // methods
-public:
-    // setters and getters
+    // Methods
+    public:
     void set_data(int data_val) { *data = data_val; }
     int get_data() { return *data; }
-    // Constructors
 
-    DeepCopy(int d);
-    DeepCopy(const DeepCopy &copy);
-    // Destructor
+    // Constructors
+    DeepCopy(int value);
+    DeepCopy(const DeepCopy &souce);
     ~DeepCopy();
 };
 // implementation
-DeepCopy::DeepCopy(int d)
+DeepCopy::DeepCopy(int value)
 {
     data = new int;
-    *data = d;
+    *data = value;
+    std::cout << "One-arg constructor " << std::endl;
 }
-
-DeepCopy::DeepCopy(const DeepCopy &source)
-    : DeepCopy{*source.data}
+DeepCopy::DeepCopy(const DeepCopy &souce)
+    : DeepCopy{*souce.data}
 {
-    data = new int; // storage for the compy of what we are pointing to  then compy the data
-    *data = *source.data;
-
-    std::cout << "Copy constructor -deep copy " << std::endl;
+    std::cout << "Copy constructor " << std::endl;
 }
 
 DeepCopy::~DeepCopy()
 {
-    // free storage
     delete data;
-    std::cout << "Destructor called" << std::endl;
+    std::cout << "Destructor freeing data " << std::endl;
+    
 }
-
-void display_DeepCopy(DeepCopy copy)
+void display_deepCopy(DeepCopy dc)
 {
-    std::cout << copy.get_data() << std::endl;
-}
+    std::cout <<"Get data "<< dc.get_data() << std::endl;
 
+}
 int main()
 {
     DeepCopy d1{100};
-    display_DeepCopy(d1);
-    DeepCopy d2{d1}; // copy d1 into d2
+    display_deepCopy(d1);
+    DeepCopy d2{d1};
     d2.set_data(1000);
 
+    
     return 0;
 }

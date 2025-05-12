@@ -23,15 +23,18 @@ Deep::Deep(int d)
     *data = d;      // store d in the space
 }
 Deep::Deep(const Deep &source)
-    : Deep(*source.data)
 {
-    std::cout << "Copy constructor - Deep copy: " << *source.data <<std::endl;
+    data = new int; // allocate storage
+    *data = *source.data;
+    std::cout << "Copy constructor - Deep copy: " << *source.data << std::endl;
 }
-Deep::~Deep(){
+Deep::~Deep()
+{
     delete data;
     std::cout << "Destructor freeing data" << std::endl;
 }
-void display_Deep(Deep s){
+void display_Deep(Deep s)
+{
     std::cout << s.get_data_value() << std::endl;
 }
 int main()
