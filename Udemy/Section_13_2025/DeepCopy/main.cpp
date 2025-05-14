@@ -19,13 +19,13 @@ public:
 
 Deep::Deep(int d)
 {
-    data = new int; // allocate space
-    *data = d;      // store d in the space
+    data = new int; // Allocate memory for an integer
+    *data = d;      // Store d in the memory
 }
 Deep::Deep(const Deep &source)
 {
-    data = new int; // allocate storage
-    *data = *source.data;
+    data = new int; // Allocate new memory space for an int
+    *data = *source.data; // Store compied data for source
     std::cout << "Copy constructor - Deep copy: " << *source.data << std::endl;
 }
 Deep::~Deep()
