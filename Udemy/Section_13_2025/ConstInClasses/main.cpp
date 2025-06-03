@@ -13,9 +13,9 @@ public:
     // methods
     void set_name(std::string name_val)
     {
-        name = name_val;
+        name = name_val; //  this->name = name_val;
     }
-    std::string get_name() const
+    std::string get_name() const // not modifying the object
     {
         return name;
     }
@@ -44,16 +44,19 @@ Player::Player(std::string name_val, int health_val, int xp_val)
     std::cout << "Three-args constructor " << std::endl;
 }
 
-void display_player_name(const Player &p)
+void display_player_name(const Player &p) // Expect reference to a const object
 {
     std::cout << p.get_name() << std::endl;
+    
+    
 }
 
 int main()
 {
-    const Player villain("Villain", 100, 55);
+    const Player villain("Villain", 100, 55); // can't chage any of villain attributes
     Player hero{"Hero", 100, 15};
-    // villain.set_name("supper");
+
+    // villain.set_name("Nice guy");
     std::cout << villain.get_name() << std::endl;
     std::cout << hero.get_name() << std::endl;
 
